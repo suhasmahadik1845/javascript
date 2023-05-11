@@ -1,3 +1,4 @@
+
 var num1 = 100;
 var num2 = 200;
 // Output --> num1 = 200,  num2 =100
