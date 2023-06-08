@@ -1,5 +1,5 @@
 console.log(`*****************  Filter and Reduce ******************`);
-console.log(`-------------------------------------------------------`);
+
 class Employee {
     constructor(emp_id, emp_name, emp_dept, emp_salary, emp_company){
         this.emp_id = emp_id;
@@ -19,8 +19,9 @@ const emp_mahi = new Employee(99, "Mahesh", "HR", 85000, "Infy");
 
 const arrayEmps = [emp_anil, emp_radha, emp_rishi, emp_sonali, emp_monika, emp_viny, emp_mahi];
 
+console.log(`------------------------- 1. ------------------------------`);
 
-console.log(`1. Employees from 'wipro' company`);
+console.log(`Employees from 'wipro' company`);
 const wipro = arrayEmps.filter((employee) => {
     return employee.emp_company == "Wipro";
 })
@@ -29,9 +30,9 @@ const wiproEmp = wipro.map((employee) => {
     return employee.emp_name;
 })
 console.log(wiproEmp);
-console.log(`-------------------------------------------------------`);
+console.log(`----------------------- 2. --------------------------------`);
 
-console.log(`2. Employees from 'IT' or 'HR'`);
+console.log(`Employees from 'IT' or 'HR'`);
 const empItHr = arrayEmps.filter((employee) => {
     return employee.emp_dept == "IT" ||employee.emp_dept == "HR";
 })
@@ -40,9 +41,9 @@ const deptItHr = empItHr.map((employee) => {
     return employee.emp_name;
 })
 console.log(deptItHr);
-console.log(`-------------------------------------------------------`);
+console.log(`-------------------------- 3. -----------------------------`);
 
-console.log(`3. Employees whose emp id's are greater than 50`);
+console.log(`Employees whose emp id's are greater than 50`);
 const empId = arrayEmps.filter((employee) => {
     return employee.emp_id > 50;
 })
@@ -50,9 +51,9 @@ const idEmp = empId.map((employee) => {
     return employee.emp_name;
 })
 console.log(idEmp);
-console.log(`-------------------------------------------------------`);
+console.log(`------------------------- 4. ------------------------------`);
 
-console.log(`4. Employees whose name starts with 'A' or 'V'`);
+console.log(`Employees whose name starts with 'A' or 'V'`);
 const startName = arrayEmps.filter((employee) => {
     return employee.emp_name.startsWith("A") || employee.emp_name.startsWith("V")|| employee.emp_name.startsWith("M");
 })
@@ -60,9 +61,9 @@ const nameStart = startName.map((employee) => {
     return employee.emp_name;
 })
 console.log(nameStart);
-console.log(`-------------------------------------------------------`);
+console.log(`------------------------ 5. -------------------------------`);
 
-console.log(`5. Average salary of all employee`);
+console.log(`Average salary of all employee`);
 const avgSalary = arrayEmps.map((employee) => {
     return employee.emp_salary;
 })
@@ -71,9 +72,9 @@ const sumSalary = avgSalary.reduce((runningTotal, value) => {
 })
 let salaryAvg = sumSalary / avgSalary.length;
 console.log(`   ${salaryAvg}`);
-console.log(`-------------------------------------------------------`);
+console.log(`--------------------------- 6. ----------------------------`);
 
-console.log("6. Average salary of 'IT' department");
+console.log("Average salary of 'IT' department");
 const itEmployees = arrayEmps.filter((employee) => {
     return employee.emp_dept === "IT";
 });
@@ -85,4 +86,3 @@ const sumItSalary = itSalaries.reduce((runningTotal, value) => {
 });
 const avgItSalary = sumItSalary / itSalaries.length;
 console.log(`   ${avgItSalary}`);
-console.log(`-------------------------------------------------------`);

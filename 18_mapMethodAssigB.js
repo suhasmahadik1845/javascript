@@ -18,21 +18,24 @@ const emp_mahi = new Employee(99, "Mahesh", "HR", 85000, "Infy");
 const array_employees = [emp_anil, emp_radha, emp_rishi, emp_sonali, emp_monika, emp_viny, emp_mahi];
 
 console.log(`========================    Map Method     ============================`);
-console.log(`1. List of all employee names`);
+console.log(`---------------------------------- 01. -------------------------------------`);
+
+
+console.log(`List of all employee names`);
 const empName = array_employees.map((employee) => {
     return employee.emp_name;
 })
 console.log(empName);
-console.log(`-----------------------------------------------------------------------`);
+console.log(`---------------------------------- 02. -------------------------------------`);
 
-console.log(`2. List of departments`);
+console.log(`List of departments`);
 const deptList = array_employees.map((employee) => {
     return employee.emp_dept;
 })
 console.log(deptList);
-console.log(`-----------------------------------------------------------------------`);
+console.log(`--------------------------------- 03. -----------------------------------------`);
 
-console.log(`2. List of employee id`);
+console.log(`List of employee id`);
 const empId = array_employees.map((employee) => {
     return employee.emp_id;
 })
